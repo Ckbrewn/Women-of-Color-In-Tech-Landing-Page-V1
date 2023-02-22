@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="no-touch" lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Our Women of Color in Tech Scholarship is for female-identifying students who are Black, Latina, and/or Native and are pursuing a computing degree. Apply today!"/>
+  <title>Scholly Exclusive: Women of Color In Tech $10,000 Scholarship</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=devanagari%2Clatin%2Clatin-ext&#038;display=swap"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=devanagari%2Clatin%2Clatin-ext&#038;display=swap" media="print" onload="this.media='all'"/><noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;subset=devanagari%2Clatin%2Clatin-ext&#038;display=swap" /></noscript>
+</head>
+<body>
+  <style>
+    <link rel='stylesheet' id='classic-theme-styles-css' href='https://c0.wp.com/c/6.1.1/wp-includes/css/classic-themes.min.css' type='text/css' media='all' />
+      <style id='global-styles-inline-css' type='text/css'>
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" id='contact-form-7-css' href='https://d67gbjf2ukphr.cloudfront.net/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='uncode-style-css' href='https://d67gbjf2ukphr.cloudfront.net/wp-content/themes/uncode/library/css/style-core.css' type='text/css' media='all' />
+      <style id='uncode-style-inline-css' type='text/css'>
+  </style>
+  <script>
+    jQuery(document).ready(function () {
+      // allow multiple submissions tries without reloading
+      document.getElementById("gform_submit_button_67").onclick = null;
+      document.getElementById("gform_submit_button_67").onkeypress = null;
+      window.woopra.config();
+
+
+      var jQueryinput = jQuery('input#input_67_1')
+      var jQuerysubmitButton = jQuery('#gform_submit_button_67');
+
+      jQuerysubmitButton.attr('disabled', true);
+      jQueryinput.keyup(function () {
+        var trigger = false;
+
+        if (!jQuery(jQueryinput).val()) {
+          trigger = true;
+        }
+
+        trigger ? jQuerysubmitButton.attr('disabled', true) : jQuerysubmitButton.removeAttr('disabled');
+
+      });
+      jQuery("#gform_67").submit(function (e) {
+        e.preventDefault();
+        jQuery("#gform_submit_button_67").val("Submitting...");
+        var error = false;
+        var invalidEmail = false;
+        var email = jQuery("#input_67_1").val();
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        // email
+        // if (!jQuery("#input_60_4").val()) {
+        //   error = true;
+        //   jQuery("#input_60_4").addClass("error");
+        // } else {
+        //   jQuery("#input_60_4").removeClass("error");
+        // }
+        // check email
+        if (!regex.test(email)) {
+          error = true;
+          invalidEmail = true;
+        }
+
+        if (!email) {
+          invalidEmail = true;
+        }
+        if (email === "") {
+          invalidEmail = true;
+          error = true
+          jQuery("#gform_submit_button_91").val("Get Started");
+        }
+        var send = {
+          form: "Google's Women In Tech Scholarship",
+          email: email,
+          opt_in: "Yes",
+          complete: 'No',
+        };
+
+        // Set the URL to the Form page Iteration 
+        var forwardURL = "/google-form/"
+
+        var urlParams = new URLSearchParams(window.location.search);
+        var headers = {};
+        var utmHeaders = {};
+        if (urlParams.has("utm_source")) {
+          utmHeaders["source"] = urlParams.get("utm_source");
+        }
+        if (urlParams.has("utm_content")) {
+          utmHeaders["content"] = urlParams.get("utm_content");
+        }
+        if (urlParams.has("utm_campaign")) {
+          utmHeaders["campaign"] = urlParams.get("utm_campaign");
+        }
+        if (urlParams.has("utm_medium")) {
+          utmHeaders["medium"] = urlParams.get("utm_medium");
+        }
+        if (urlParams.has("utm_term")) {
+          utmHeaders["term"] = urlParams.get("utm_term");
+        }
+        if (urlParams.has("fbuy_ref_code")) {
+          send["referral_code"] = urlParams.get("fbuy_ref_code");
+          urlParams.delete("fbuy_ref_code");
+        }
+        if (
+          Object.keys(utmHeaders).length > 0 &&
+          utmHeaders.constructor === Object
+        ) {
+          headers["UTM"] = JSON.stringify(utmHeaders);
+        }
+        if (error == false) {
+          jQuery("#gform_submit_button_67").val("Submitting");
+          sessionStorage.setItem("email", email);
+          jQuery.ajax({
+            type: "POST",
+            url: "https://apiv2.myscholly.com/form", // prod
+          //   url: "https://apiv2.dev.myscholly.com/form", // dev
+            data: JSON.stringify(send),
+            headers,
+            contentType: "application/json",
+            success: function (data) {
+              if (data.status === "OK") {
+                setTimeout(function () {
+                  jQuery("#gform_67")[0].reset();
+                  console.log("sent!");
+
+                  jQuery("#gform_submit_button_67")
+                    .val("Sent!")
+                    .prop("disabled", true);
+
+                  window.woopra.track("Google's Women In Tech Scholarship", send);
+
+                  jQuery("#error-messages").text("");
+
+                  if ("friendbuy" in window && "referral_code" in send) {
+                    const num = Math.floor(
+                      Math.random() * (999 - 100 + 1) + 100
+                    );
+
+                    window["friendbuy"].push([
+                      "track",
+                      "order",
+                      {
+                        id: "30 Days 2021.".num,
+                        coupon_code: send["referral_code"],
+                        email: send["email"],
+                      },
+                    ]);
+                  }
+
+                  //Get email hash, send to Impact
+                  jQuery.ajax({
+                    type: "GET",
+                    url:
+                      "https://apiv2.myscholly.com/user/email-hash?email=" +
+                      send["email"], // prod
+                    //url: "https://apiv2.dev.myscholly.com/user/email-hash?email=" + send["email"], // dev
+                    headers,
+                    contentType: "application/json",
+                    success: function (emailHash) {
+                      if (data.data && data.data.site_form_entry.id) {
+                        jQuery(".js-aspiration-link").attr(
+                          "href",
+                          "https://aspiration.a5oq.net/c/2535928/974193/8519?subId1=" +
+                          data.data.site_form_entry.id
+                        );
+                      }
+
+
+                      ire(
+                        "trackConversion",
+                        24864,
+                        {
+                          orderId: data.data.site_form_entry.id,
+                          customerId: data.data.site_form_entry.id,
+                          customerEmail: emailHash.data.hash,
+                          items: [
+                            {
+                              subTotal: 0.0,
+                              category:
+                                send["us_resident"] == "Yes" ? "Y" : "N",
+                              sku:
+                                calculateAge(send["birthday"]) > 17 ? "Y" : "N",
+                              quantity: 1,
+                            },
+                          ],
+                        },
+                        {
+                          verifySiteDefinitionMatch: true,
+                        }
+                      );
+                    },
+                  });
+                }, 1000);
+
+                // IF Successful, Forward to the page with the rest of the form
+                window.location.href = forwardURL;
+              } else {
+                if (data.error) {
+                  for (const i in data.error) {
+                    if (data.error[i].field === "phone") {
+                      jQuery("#input_60_5").addClass("error");
+                    }
+                    jQuery("#error-messages").text(data.error[i].message);
+                  }
+                  jQuery("#gform_submit_button_91").val("Get Started");
+                }
+              }
+            },
+          });
+        } else {
+          if (invalidEmail || email === "") {
+
+            jQuery("#error-modal").modal();
+            jQuery("#error-messages").text("Please enter a valid email");
+            jQuery("#gform_submit_button_91").val("Get Started");
+          } else {
+            jQuery("#error-messages").text("Missing required fields");
+          }
+        }
+        // jQuery("#gform_submit_button_67").val("Submitting...");
+        jQuery('a.close-modal').on('click', function () {
+          jQuery.modal.close();
+        })
+      });
+    });
+
+    function calculateAge(dateString) {
+      var today = new Date();
+      var birthDate = new Date(dateString);
+      var age = today.getFullYear() - birthDate.getFullYear();
+      var m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      return age;
+    }
+  </script>
+</body>
+</html>
